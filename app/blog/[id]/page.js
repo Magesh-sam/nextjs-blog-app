@@ -5,7 +5,6 @@ import Link from "next/link";
 export async function generateMetadata({params}) {
     const response = await axios.get(`https://dummyjson.com/posts/${params.id}`);
     const data = await response.data;
-    console.log(params.id)
     return {
         title: data.title,
         description: data.body,

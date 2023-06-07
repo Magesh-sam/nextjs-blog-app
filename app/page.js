@@ -2,16 +2,13 @@ import axios from 'axios';
 import Image from 'next/image'
 import Link from 'next/link';
 import styles from './styles/Home.module.css'
-import { useRouter } from 'next/navigation';
 
 export default async function Home() {
   const response = await axios.get('https://dummyjson.com/posts?limit=15');
   const data = await response.data;
   const posts = data.posts;
 
-  const router = useRouter();
 
-  console.log(path)
 
   return (
     <main >
