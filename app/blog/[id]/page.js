@@ -16,7 +16,7 @@ export async function generateMetadata({params}) {
     };
 }
 export default async function BlogDetail({ params }) {
-    const response = await axios.get(`https://dummyjson.com/posts/${params.id}`);
+    const response = await axios.get(`https://dummyjson.com/posts/${params.id}`,{ cache: 'no-store' });
     const data = await response.data;
 
     return (
