@@ -33,7 +33,7 @@ export default async function Blogs() {
                 posts.map((post) => (
                     <Link key={post.id} href={{
                         pathname: `/blog/${post.id}`,
-                    }} className="link" >
+                    }} className="link" replace>
                         <article className={styles.blog}  >
                             <h2>{post.title}</h2>
                             <section className={styles.tags} >
