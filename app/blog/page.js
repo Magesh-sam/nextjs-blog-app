@@ -31,7 +31,9 @@ export default async function Blogs() {
             <h1 className={styles.pageHeading}> All Blogs </h1>
             {
                 posts.map((post) => (
-                    <Link key={post.id} href={`/blog/${post.id}`} className="link" >
+                    <Link key={post.id} href={{
+                        pathname: `/blog/${post.id}`,
+                    }} className="link" >
                         <article className={styles.blog}  >
                             <h2>{post.title}</h2>
                             <section className={styles.tags} >

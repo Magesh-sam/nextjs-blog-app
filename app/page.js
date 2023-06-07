@@ -17,7 +17,7 @@ export default async function Home() {
       <section className={styles.blogContainer}>
         <h2 className={styles.blogHeading} >Featured posts</h2>
         {posts.map((post) => (
-          <Link key={post.id} href={`/blog/${post.id}`} className='link' >
+          <Link key={post.id} href={{pathname: `/blog/${post.id}`,}} className='link' >
             <article  className={styles.blog}>
               <Image class={styles.blogCover} src='/blogCover.jpg' alt='Blog Cover' loading='lazy' width={300} height={250}  />
               <section className={styles.blogContent} >
